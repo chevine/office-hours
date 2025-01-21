@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet author="chris" id="01_employee_job_changes">
+      <sqlFile dbms="oracle"
+               endDelimiter=";"
+               path="../view/employee_job_changes.sql"
+               relativeToChangelogFile="true"
+               splitStatements="true"
+               stripComments="false"/>
+    </changeSet>
+    <changeSet author="chris" id="02_change_job">
+      <sqlFile dbms="oracle"
+               endDelimiter=";"
+               path="../procedure/change_job.sql"
+               relativeToChangelogFile="true"
+               splitStatements="false"
+               stripComments="false"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+     <changeSet author="jasmin" id="01_alter_job_history">
+      <sqlFile dbms="oracle"
+               endDelimiter=";"
+               path="../table/add_job_history_audit.sql"
+               relativeToChangelogFile="true"
+               splitStatements="true"
+               stripComments="false"/>
+    </changeSet>
+    <changeSet author="jasmin" id="02_hr_app_schema_grants.sql">
+      <sqlFile dbms="oracle"
+               endDelimiter=";"
+               path="../grant/hr_app_schema_grants.sql"
+               relativeToChangelogFile="true"
+               splitStatements="true"
+               stripComments="false"/>
+    </changeSet>
+</databaseChangeLog>
